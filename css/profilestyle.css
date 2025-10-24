@@ -1,0 +1,304 @@
+@font-face {
+    font-family: "Bruney" ;
+    src: url(../fonts/Bruney.otf);
+}
+
+@font-face {
+    font-family: "avant";
+    src: url(../fonts/AvantGardeBookBT.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+html{
+    scroll-snap-type: y mandatory;
+}
+
+div{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+footer{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* header */
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 100;
+}
+
+#splogo{
+    margin-left: 45px;
+    width: 150px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.nav{
+    margin-right: 45px;
+    
+}
+
+.nav a {
+    position: relative;
+    font-family: "Bruney";
+    justify-content: space-between;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 6px 15px;
+    font-size: 16px;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.nav a:hover
+{
+    color: #333;
+}
+
+.nav a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 30px;
+    text-align: center;
+    z-index: -1;
+    transform: scale(0);
+    transition: .5s;
+}
+
+.nav a:hover span
+{
+    transform: scale(1);
+}
+
+
+/* profile */
+.profile
+{
+    position: relative;
+    display: block;
+    justify-content: center;
+    height: 100vh   ;
+    background: url(../backgrounds/sp_background2.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-position: fixed;
+    scroll-snap-align: start;
+}
+
+.conti{
+    background-color: black;
+}
+
+/* profile */
+#profile1{
+    text-align: center;
+}
+
+#profile{
+    width: 200px;
+    height: 200px;
+    border: 3px white solid ;
+    border-radius: 50%;
+    margin-top: 100px;
+} 
+#profile1{
+    height: fit-content;
+    width: 100vw;
+}
+
+#profile1 h1{
+    font-family: "avant";
+    color: white;
+    font-size: 45px;
+    padding: 10px;
+}
+
+#profile1 p{
+    font-family: "avant";
+    color: white;
+    font-size: 20px;
+}
+
+/* bottompart */
+#bottom{
+    display: flex;
+    margin: 50px;
+    border-bottom: 3px white solid;
+    justify-content: space-between;
+}
+
+#spcol{
+    font-family: "avant";
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    
+}
+
+#wish{
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 150px;
+    font-family: "avant";
+    display: flex;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#star{
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    object-fit: cover;
+    
+}
+
+#wish p{
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* slider */
+
+#slider{
+    width: 100%;
+    margin-top: 0;
+    top: 0;
+    margin: 50px;
+}
+
+#slider-wrapper{
+    position: relative;
+}
+
+#slider-wrapper, #image-list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    width: 94vw;
+    text-align: center;
+}
+
+.material-symbols-rounded{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px black solid;
+    top: 58%;
+    transform: translateY(-98%);
+    cursor: pointer;
+}
+
+#left{
+    left: -20px;
+}
+
+#right{
+    right: -20px;
+}
+
+
+
+#image-list{
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+#image-list::-webkit-scrollbar{
+    display: none;
+}
+
+#thevalley, #thescene, #reality_3, #night_2, #night_4{
+    width: 285px;
+    object-fit: cover;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#image-list figcaption{
+    font-family: "avant";
+    color: white;
+}
+
+/* footer */
+footer{
+
+    background-color: #111;
+}
+
+.footer{
+    width: 100%;
+    padding-top: 30px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.icons a{
+    
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.icons a i{
+    font-size: 20px;
+    color: black;
+}
+
+.icons a:hover{
+    background-color: black;
+    transition: .3s;
+}
+
+.icons a:hover i{
+    color: white;
+    transition: .3s;
+}
+
+.footerbot{
+
+    padding: 10px;
+
+}
+
+.footerbot p{
+    color: white ;
+    text-align: center;
+}
